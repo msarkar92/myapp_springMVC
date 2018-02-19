@@ -1,0 +1,21 @@
+@CHARSET "ISO-8859-1";
+
+html {
+	background: url("../img/background.jpg") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+body {
+	text-align: center;
+}
+
+h1 {
+   font-style: oblique;
+}
+
+.error {
+	color: red;
+}

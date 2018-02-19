@@ -1,0 +1,3 @@
+mvn dependency:tree -Dincludes=:spring*::
+
+To solve conflicts between spring versions
