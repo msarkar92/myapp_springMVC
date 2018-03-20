@@ -1,4 +1,4 @@
-package com.mrinal.dto;
+package com.mrinal.model;
 
 public class User {
 	private String name;
