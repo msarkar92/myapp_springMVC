@@ -23,10 +23,5 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
-	<!-- 
-	<bean id="User" class="com.mrinal.dto.User">
-		<property name="name" value=""/>
-		<property name="password" value=""/>
-	</bean>
-	 -->
+	
 </beans>

@@ -13,7 +13,7 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">Login</div>
 		<div class="panel-body">
-			<form:form class="form-inline" action="login" method="post" commandName="User">			
+			<form:form class="form-inline" action="login" method="post" modelAttribute="User">			
 				<div class="form-group">
 					<label class="sr-only" for="name">Email address:</label> 
 					<form:input path="name" name="name" class="form-control"/>

@@ -10,7 +10,7 @@
 	<context:annotation-config/> 
 	<!-- <context:component-scan base-package="comm.mrinal"/> -->
 
-	<bean id="User" class="com.mrinal.dto.User">
+	<bean id="User" class="com.mrinal.model.User">
 		<property name="name" value=""/>
 		<property name="password" value=""/>
 	</bean>
