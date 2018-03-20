@@ -10,7 +10,7 @@
 
 <body>
 	<div class="panel panel-default">
-		<div class="panel-body">Welcome To MyApp</div>
+		<div class="panel-body">Welcome To MyApp ${NAME}</div>
 	</div>
 </body>
 </html>
