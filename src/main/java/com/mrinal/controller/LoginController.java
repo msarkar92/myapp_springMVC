@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.mrinal.dao.UserLoginDAOImpl;
 import com.mrinal.model.User;
 
 @Controller
@@ -41,6 +42,7 @@ public class LoginController {
 		ModelAndView mav = null;
 		System.out.println(user.getName());
 		if(user!=null) {
+			UserLoginDAOImpl.save(user);
 			mav = new ModelAndView("home");
 			mav.addObject("NAME", user.getName());
 		}
