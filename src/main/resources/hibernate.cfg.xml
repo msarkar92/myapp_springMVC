@@ -28,5 +28,8 @@
 		
 		<!-- Mapping with model class containing annotations -->
 		<mapping class="com.mrinal.model.User"/>
+		<mapping class="com.mrinal.model.Cart"/>
+		<mapping class="com.mrinal.model.Item"/>
+		
 	</session-factory>
 </hibernate-configuration>

@@ -2,7 +2,6 @@ package com.mrinal.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
-import java.sql.ResultSet;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -26,6 +25,7 @@ public class UserLoginDAOImpl implements LoginDAO {
 		session.beginTransaction();
 		session.save(user);
 		session.getTransaction().commit();
+		session.close();
 	}
 	
 	public static void save_reg(User user) {
