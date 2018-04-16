@@ -14,4 +14,6 @@
 		<property name="name" value=""/>
 		<property name="password" value=""/>
 	</bean>
+	
+	<bean id="Login" class="com.mrinal.model.Login"/>
 </beans>

@@ -14,12 +14,14 @@ import org.springframework.web.servlet.ModelAndView;
 public class SiteController {
 	
 	private final static Logger LOG = LoggerFactory.getLogger(SiteController.class);
-	private Integer i=0;
+	
+	//private Integer i=0;
+	
 	@RequestMapping(method=RequestMethod.GET)
 	public String show(ModelMap model) throws Exception{
 		LOG.info("Forwarding to home...");
-		if(i==null)
-			throw new NullPointerException();
+//		if(i==null)
+//			throw new NullPointerException();
 		return "home";
 	}
 	

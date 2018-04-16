@@ -13,14 +13,14 @@
 	<div class="panel panel-default">
 		<div class="panel-heading">Login</div>
 		<div class="panel-body">
-			<form:form class="form-inline" action="login" method="post" modelAttribute="User">			
+			<form:form class="form-inline" action="login" method="post" commandName="Login">			
 				<div class="form-group">
 					<label class="sr-only" for="name">Email address:</label> 
-					<form:input path="name" name="name" class="form-control"/>
+					<form:input path="loginValue" name="name" class="form-control"/>
 				</div>
 				<div class="form-group">
 					<label class="sr-only" for="pwd">Password:</label>
-					<form:password path="password" class="form-control"/>
+					<form:password path="loginPassword" class="form-control"/>
 				</div>
 				<div class="checkbox">
 					<label><input type="checkbox"> Remember me</label>

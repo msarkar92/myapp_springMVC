@@ -10,7 +10,7 @@
 <body>
 <h2>Error !</h2>
 <div>
-	<!--<c:out value="${name}"></c:out>-->
+	<c:out value="${name}"></c:out>
 	<h3><c:out value="${message }"></c:out></h3> 
 </div>
 </body>

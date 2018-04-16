@@ -13,7 +13,7 @@ public class ExceptionController {
 	private final static Logger LOG = LoggerFactory.getLogger(ExceptionController.class);
 	@ExceptionHandler(Exception.class)
 	public ModelAndView exception(Exception e) {
-		LOG.error("Exception thrown",e);
+		LOG.error("Exception thrown: ",e);
 		ModelAndView mav = new ModelAndView("common/error/error");
 		mav.addObject("name", e.getClass().getSimpleName());
 		mav.addObject("message", e.getMessage());

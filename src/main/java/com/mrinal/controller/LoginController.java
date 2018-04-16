@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.mrinal.dao.UserLoginDAOImpl;
-import com.mrinal.model.User;
+import com.mrinal.model.Login;
 
 @Controller
 @RequestMapping(value="/login")
@@ -30,21 +30,21 @@ public class LoginController {
 		//WebApplicationContext context = WebApplicationContextUtils.getRequiredWebApplicationContext();
 		
 		ApplicationContext context=new ClassPathXmlApplicationContext("applicationContext.xml");
-		User user=context.getBean("User",User.class);
+		Login user=context.getBean("Login",Login.class);
 		//User user=new User();
-		model.put("User", user);
+		model.put("Login", user);
 		LOG.info("Forwarding to login...");
 		return page;
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
-	public ModelAndView login(HttpServletRequest request, HttpServletResponse response,@ModelAttribute("userForm") User user,Map<String, Object> model) throws Exception{
+	public ModelAndView login(HttpServletRequest request, HttpServletResponse response,@ModelAttribute("userForm") Login user,Map<String, Object> model) throws Exception{
 		ModelAndView mav = null;
-		System.out.println(user.getName());
+		System.out.println(user.getLoginValue());
 		if(user!=null) {
-			UserLoginDAOImpl.save(user);
+			Boolean res=new UserLoginDAOImpl().validateLogin(user);
 			mav = new ModelAndView("home");
-			mav.addObject("NAME", user.getName());
+			mav.addObject("NAME", res?user.getLoginValue():"No such user");
 		}
 		LOG.info("Forwarding to home...");
 		return mav;

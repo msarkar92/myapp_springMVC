@@ -1,9 +1,7 @@
 package com.mrinal.dao;
 
-import com.mrinal.model.User;
+import com.mrinal.model.Login;
 
 public interface LoginDAO {
-	
-	public Boolean validateLogin(User user);
-
+	public Boolean validateLogin(Login user);
 }
