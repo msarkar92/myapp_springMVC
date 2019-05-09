@@ -10,6 +10,7 @@
 <jsp:include page="../common/header.jsp"></jsp:include>
 </head>
 <body>
+	<p>My-App</p>
 	<div class="panel panel-default">
 		<div class="panel-heading">Login</div>
 		<div class="panel-body">
